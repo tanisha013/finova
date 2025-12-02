@@ -1,11 +1,16 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-
+import { useEffect, useRef } from "react";
  
 
 const HeroSection = () => {
-  const imageRef = useRef()
+  const imageRef=useRef()
+  useEffect(() => {
+    const imageElement=imageRef.current;
+
+    window.addEventListener("scroll", handleScroll)
+  })
   return (
   <div className="pb-20 px-4">
     <div className="container mx-autp text-center">
@@ -24,7 +29,7 @@ const HeroSection = () => {
         </Link>
       </div>
       <div className="hero-image-wrapper">
-        <div>
+        <div ref={imageRef} className="hero-image">
           <Image 
             src='/banner.jpeg'  width={1200}
             height={720}
