@@ -13,15 +13,36 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #ffffff;
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
+/* @utility gradient {
+  background-image: conic-gradient(
+    theme(colors.blue.600),
+    theme(colors.purple.600)
+  );
+} */
+
+/* @utility gradient-title {
+  @apply background-image: conic-gradient(
+    theme(colors.blue.600),
+    theme(colors.purple.600)
+  );
+  @apply font-extrabold bg-clip-text text-transparent tracking-tighter;
+} */
+
+@utility gradient {
+    @apply bg-linear-to-br from-blue-600 to-purple-600;
+  }
+@utility gradient-title {
+    @apply gradient font-extrabold tracking-tighter pr-2 pb-2 text-transparent bg-clip-text;
+  }
