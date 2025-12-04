@@ -5,11 +5,11 @@ import Image from 'next/image'
 import { LayoutDashboard, PenBox } from "lucide-react"
 const Header = () => {
   return (
-    <div className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
-        <nav className='container mx-auto px-2 py-3 flex items-center justify-between'>
+    <div className="fixed top-0 w-full bg-white-100 backdrop-blur-md z-50 border-b">
+        <nav className='container mx-auto py-3 flex items-center justify-between'>
            <Link href="/">
            <Image 
-            src={"/logo.png"} 
+            src={"/logo_final.png"} 
             alt='finova logo' 
             height={60} 
             width={150}

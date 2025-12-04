@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
  
@@ -25,35 +24,41 @@ const HeroSection = () => {
   }, []);
 
   return (
-  <div className="pb-20 px-4">
-    <div className="container mx-auto text-center">
-      <h1 className="text-5xl md:text-8xl lg:text-[90px] pb-6 gradient-title">
-        Manage Your Finances <br/> with Intelligence
-      </h1>
-      <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-        An AI-powered financial management platform that helps you track, analyze, and optimize your spending with real-time insights.
-      </p>
-      <div className="flex justify-center space-x-4">
-        <Link href="/dashboard">
-          <button className="btn btn-lg bg-black text-white rounded-xl shadow hover:bg-neutral-700 px-5">Get Started</button>
-        </Link>
-        <Link href="#features">
-          <button className="btn btn-lg px-5 rounded-xl">Explore Features</button>
-        </Link>
-      </div>
-      <div className="hero-image-wrapper">
-        <div ref={imageRef} className="hero-image">
-          <Image 
-            src='/banner.jpeg'  width={1050}
-            height={720}
-            alt="Dashboard Preview"
-            className="rounded-lg shadow-2xl border mx-auto"
-            priority
-          />  
+    <section
+      className="relative h-screen flex items-center bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url('banner_hero.png')",
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/60"></div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl px-4 py-2 ml-10 text-white font-extrabold">
+        <h1 className="text-4xl md:text-6xl lg:text-[60px] pb-6 mt-5">
+          Manage Your Finances <br/> with Intelligence
+        </h1>
+
+        <p className="max-w-xl mb-10">
+          An AI-powered financial management platform that helps you track, analyze, and optimize your spending with real-time insights.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link href="/dashboard" className="inline-block">
+          <button className="btn px-12 py-6 text-lg bg-blue-600 border-blue-600 hover:bg-blue-800 rounded-md w-auto">
+          GET STARTED
+          </button>
+          </Link>
+
+          <Link href="#features">
+          <button className="btn text-lg px-7 py-6 border border-white bg-transparent text-white rounded-md hover:bg-white hover:text-black transition">
+            EXPLORE FEATURES
+          </button>
+          </Link>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
   );
 }
 
