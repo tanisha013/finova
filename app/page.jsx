@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="mt-40">
+    <div>
       <HeroSection/>
       {/* Stats Section */}
       <section className="py-20 bg-blue-50">
@@ -101,11 +101,11 @@ export default function Home() {
             Join thousands of users who are already managing their finances
             smarter with Finova
           </p>
-          <Link href="/dashboard">
+          <Link href="/sign-up">
             <button 
               className="btn btn-lg bg-white text-blue-600 hover:bg-blue-50 animate-bounce"
             >
-              Start Free Trial
+              Join Today
             </button>
           </Link>
         </div>
