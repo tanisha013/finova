@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { LayoutDashboard, PenBox } from "lucide-react"
 const Header = () => {
   return (
-    <div className="fixed top-0 w-full bg-white-100 backdrop-blur-md z-50 border-b">
+    <div className="fixed top-0 w-full bg-white backdrop-blur-md z-50 border-b">
         <nav className='container mx-auto py-3 flex items-center justify-between'>
            <Link href="/">
            <Image 
