@@ -38,3 +38,5 @@ yarn-error.log*
 
 
 /app/generated/prisma
+
+/app/generated/prisma
